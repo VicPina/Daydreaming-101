@@ -15,6 +15,8 @@ public class CharacterController2D : MonoBehaviour
     public Mechanics universe;
     public int jumps = 0;
     public int maxJumps = 2;
+    public Transform keyholder;
+    public Key followinkey;
 
     bool facingRight = true;
     float moveDirection = 0;
@@ -45,27 +47,24 @@ public class CharacterController2D : MonoBehaviour
     void Update()
     {
         // Movement controls
-        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && (isGrounded || Mathf.Abs(r2d.velocity.x) > 0.01f))
+        if (Input.GetAxis("Horizontal")>0|| Input.GetAxis("Horizontal") < 0)
         {
-            moveDirection = Input.GetKey(KeyCode.A) ? -1 : 1;
+            moveDirection = Input.GetAxis("Horizontal");
         }
         else
         {
-            if (isGrounded || r2d.velocity.magnitude < 0.01f)
-            {
-                moveDirection = 0;
-            }
+            moveDirection = 0;
         }
 
         // Change facing direction
         if (moveDirection != 0)
         {
-            if (moveDirection > 0 && !facingRight)
+            if (moveDirection > 0 )
             {
                 facingRight = true;
                 t.localScale = new Vector3(Mathf.Abs(t.localScale.x), t.localScale.y, transform.localScale.z);
             }
-            if (moveDirection < 0 && facingRight)
+            if (moveDirection < 0 )
             {
                 facingRight = false;
                 t.localScale = new Vector3(-Mathf.Abs(t.localScale.x), t.localScale.y, t.localScale.z);
@@ -73,7 +72,7 @@ public class CharacterController2D : MonoBehaviour
         }
 
         // Jumping
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             if (universe._mundoActual == Mechanics.MundoActual.MundoFantastico)
             {
@@ -88,7 +87,7 @@ public class CharacterController2D : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && jumps< maxJumps && universe._mundoActual == Mechanics.MundoActual.MundoFantastico)
+        if (Input.GetButtonDown("Jump") && !isGrounded && jumps< maxJumps && universe._mundoActual == Mechanics.MundoActual.MundoFantastico)
         {
             
             r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
