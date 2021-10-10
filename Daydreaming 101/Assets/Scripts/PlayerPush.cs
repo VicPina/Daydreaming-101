@@ -20,14 +20,14 @@ public class PlayerPush : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(playerCheck.transform.position, Vector2.right * transform.localScale.x, distancia, boxMask);
         Debug.DrawRay(playerCheck.transform.position, Vector2.right * transform.localScale.x * distancia, Color.red);
 
-        if (hit.collider != null && hit.collider.gameObject.tag == "Pusheable" && Input.GetKeyDown(KeyCode.Space))
+        if (hit.collider != null && hit.collider.gameObject.tag == "Pusheable" && Input.GetKeyDown(KeyCode.R))
         {
             box = hit.collider.gameObject;
             box.GetComponent<FixedJoint2D>().enabled = true;
             box.GetComponent<BoxPull>().empujado = true;
             box.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
         }
-        else if (Input.GetKeyUp(KeyCode.Space))
+        else if (Input.GetKeyUp(KeyCode.R))
         {
             box.GetComponent<FixedJoint2D>().enabled = false;
             box.GetComponent<BoxPull>().empujado = false;
