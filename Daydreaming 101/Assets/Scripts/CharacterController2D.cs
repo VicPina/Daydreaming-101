@@ -15,6 +15,8 @@ public class CharacterController2D : MonoBehaviour
     public Mechanics universe;
     public int jumps = 0;
     public int maxJumps = 2;
+    public Transform keyholder;
+    public Key followinkey;
 
     bool facingRight = true;
     float moveDirection = 0;
