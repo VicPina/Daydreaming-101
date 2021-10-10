@@ -45,27 +45,24 @@ public class CharacterController2D : MonoBehaviour
     void Update()
     {
         // Movement controls
-        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && (isGrounded || Mathf.Abs(r2d.velocity.x) > 0.01f))
+        if (Input.GetAxis("Horizontal")>0|| Input.GetAxis("Horizontal") < 0)
         {
-            moveDirection = Input.GetKey(KeyCode.A) ? -1 : 1;
+            moveDirection = Input.GetAxis("Horizontal");
         }
         else
         {
-            if (isGrounded || r2d.velocity.magnitude < 0.01f)
-            {
-                moveDirection = 0;
-            }
+            moveDirection = 0;
         }
 
         // Change facing direction
         if (moveDirection != 0)
         {
-            if (moveDirection > 0 && !facingRight)
+            if (moveDirection > 0 )
             {
                 facingRight = true;
                 t.localScale = new Vector3(Mathf.Abs(t.localScale.x), t.localScale.y, transform.localScale.z);
             }
-            if (moveDirection < 0 && facingRight)
+            if (moveDirection < 0 )
             {
                 facingRight = false;
                 t.localScale = new Vector3(-Mathf.Abs(t.localScale.x), t.localScale.y, t.localScale.z);
