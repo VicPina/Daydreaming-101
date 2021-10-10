@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Mechanics : MonoBehaviour
 {
-    public GameObject gameLogic;
+    public GameObject scenery;
+
+    public ObjectSpriteChanger[] sceneObjs;
+
     public enum MundoActual
     {
         MundoDeprimente,
@@ -12,10 +15,9 @@ public class Mechanics : MonoBehaviour
     }
 
     public MundoActual _mundoActual = MundoActual.MundoDeprimente;
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        sceneObjs = scenery.GetComponentsInChildren<ObjectSpriteChanger>();
     }
 
     // Update is called once per frame
@@ -26,7 +28,8 @@ public class Mechanics : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 _mundoActual = MundoActual.MundoFantastico;
-                gameLogic.GetComponent<GameLogic>().happy = true;
+                var setTrue = true;
+                StartCoroutine(SetSprites(setTrue));
             }
         }
         if (_mundoActual == MundoActual.MundoFantastico)
@@ -34,8 +37,20 @@ public class Mechanics : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 _mundoActual = MundoActual.MundoDeprimente;
-                gameLogic.GetComponent<GameLogic>().happy = false;
+                var setFalse = false;
+                StartCoroutine(SetSprites(setFalse));
             }
         }
+    }
+
+    IEnumerator SetSprites(bool changeTo)
+    {
+        foreach(ObjectSpriteChanger affected in sceneObjs)
+        {
+            affected.ObjectAction();
+            affected.Happy = changeTo;
+        }
+
+        yield return null;
     }
 }
