@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    private PlayerController thePlayer;
+    private CharacterController2D thePlayer;
     public SpriteRenderer TheSR;
     public Sprite DOC;
     public bool dooropen, waiting;
     // Start is called before the first frame update
     void Start()
     {
-        thePlayer = FindObjectOfType<PlayerController>();
+        thePlayer = FindObjectOfType<CharacterController2D>();
     }
 
     // Update is called once per frame
