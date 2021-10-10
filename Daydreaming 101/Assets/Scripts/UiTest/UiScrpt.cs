@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UiScrpt : MonoBehaviour
 {
-    private TestMov thePlayer;
+    //private TestMov thePlayer;
     public SpriteRenderer Invisible;
     void Start()
     {
