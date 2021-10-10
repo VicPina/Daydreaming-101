@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mechanics : MonoBehaviour
 {
-
+    public GameObject gameLogic;
     public enum MundoActual
     {
         MundoDeprimente,
@@ -26,6 +26,7 @@ public class Mechanics : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 _mundoActual = MundoActual.MundoFantastico;
+                gameLogic.GetComponent<GameLogic>().happy = true;
             }
         }
         if (_mundoActual == MundoActual.MundoFantastico)
@@ -33,6 +34,7 @@ public class Mechanics : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 _mundoActual = MundoActual.MundoDeprimente;
+                gameLogic.GetComponent<GameLogic>().happy = false;
             }
         }
     }
