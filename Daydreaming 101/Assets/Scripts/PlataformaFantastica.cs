@@ -7,6 +7,8 @@ public class PlataformaFantastica : MonoBehaviour
     public Mechanics universe;
     public BoxCollider2D Collider;
     public SpriteRenderer Sprite;
+    public Rigidbody2D rbd;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +23,13 @@ public class PlataformaFantastica : MonoBehaviour
         {
             Collider.enabled = true;
             Sprite.enabled = true;
+            rbd.simulated = true;
         }
         if (universe._mundoActual == Mechanics.MundoActual.MundoDeprimente)
         {
             Collider.enabled = false;
             Sprite.enabled = false;
+            rbd.simulated = false;
         }
     }
 }
