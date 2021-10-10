@@ -60,3 +60,5 @@ sysinfo.txt
 crashlytics-build.properties
 Daydreaming 101/Logs/AssetImportWorker0.log
 *.meta
+*.json
+*.log
