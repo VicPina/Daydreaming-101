@@ -32,7 +32,7 @@ public class Door : MonoBehaviour
 
         if (dooropen && Vector3.Distance(thePlayer.transform.position, transform.position)<1f )
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
     }
 
