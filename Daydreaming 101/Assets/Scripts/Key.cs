@@ -27,7 +27,7 @@ public class Key : MonoBehaviour
         {
             if (!isFollowing)
             {
-                PlayerController thePlayer = FindObjectOfType<PlayerController>();
+                CharacterController2D thePlayer = FindObjectOfType<CharacterController2D>();
                 followTarget = thePlayer.keyholder;
                 isFollowing = true;
                 thePlayer.followinkey = this;
