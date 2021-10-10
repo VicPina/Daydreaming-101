@@ -25,7 +25,7 @@ public class Mechanics : MonoBehaviour
     {
         if (_mundoActual == MundoActual.MundoDeprimente)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetButtonDown("Fantastico"))
             {
                 _mundoActual = MundoActual.MundoFantastico;
                 var setTrue = true;
@@ -34,7 +34,7 @@ public class Mechanics : MonoBehaviour
         }
         if (_mundoActual == MundoActual.MundoFantastico)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetButtonDown("Depresivo"))
             {
                 _mundoActual = MundoActual.MundoDeprimente;
                 var setFalse = false;

@@ -70,7 +70,7 @@ public class CharacterController2D : MonoBehaviour
         }
 
         // Jumping
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             if (universe._mundoActual == Mechanics.MundoActual.MundoFantastico)
             {
@@ -85,7 +85,7 @@ public class CharacterController2D : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && jumps< maxJumps && universe._mundoActual == Mechanics.MundoActual.MundoFantastico)
+        if (Input.GetButtonDown("Jump") && !isGrounded && jumps< maxJumps && universe._mundoActual == Mechanics.MundoActual.MundoFantastico)
         {
             
             r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
