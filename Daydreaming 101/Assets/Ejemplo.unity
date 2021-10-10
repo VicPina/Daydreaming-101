@@ -421,6 +421,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6563716977944411682, guid: 4123c7784113e1a45a5a4d683dd61da6, type: 3}
+      propertyPath: defaultProcess.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563716977944411682, guid: 4123c7784113e1a45a5a4d683dd61da6, type: 3}
+      propertyPath: defaultProcess.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563716977944411682, guid: 4123c7784113e1a45a5a4d683dd61da6, type: 3}
+      propertyPath: defaultProcess.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563716977944411682, guid: 4123c7784113e1a45a5a4d683dd61da6, type: 3}
+      propertyPath: defaultProcess.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563716977944411682, guid: 4123c7784113e1a45a5a4d683dd61da6, type: 3}
+      propertyPath: defaultProcess.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563716977944411682, guid: 4123c7784113e1a45a5a4d683dd61da6, type: 3}
+      propertyPath: defaultProcess.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ObjectSpriteChanger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563716977944411682, guid: 4123c7784113e1a45a5a4d683dd61da6, type: 3}
+      propertyPath: defaultProcess.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4123c7784113e1a45a5a4d683dd61da6, type: 3}
 --- !u!4 &842858565 stripped
@@ -820,6 +848,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 541458685}
     m_Modifications:
+    - target: {fileID: 7688763206913867825, guid: 84718d7d55ff01244a072d7492b284c3, type: 3}
+      propertyPath: defaultProcess.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688763206913867825, guid: 84718d7d55ff01244a072d7492b284c3, type: 3}
+      propertyPath: defaultProcess.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688763206913867825, guid: 84718d7d55ff01244a072d7492b284c3, type: 3}
+      propertyPath: defaultProcess.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688763206913867825, guid: 84718d7d55ff01244a072d7492b284c3, type: 3}
+      propertyPath: defaultProcess.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688763206913867825, guid: 84718d7d55ff01244a072d7492b284c3, type: 3}
+      propertyPath: defaultProcess.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688763206913867825, guid: 84718d7d55ff01244a072d7492b284c3, type: 3}
+      propertyPath: defaultProcess.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: ObjectSpriteChanger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688763206913867825, guid: 84718d7d55ff01244a072d7492b284c3, type: 3}
+      propertyPath: defaultProcess.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7688763206913867826, guid: 84718d7d55ff01244a072d7492b284c3, type: 3}
       propertyPath: m_RootOrder
       value: 4
